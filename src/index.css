@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme{
+  --color-primary-bg:#ffffff;
+  --color-footer-bg:#0e0e15;
+  --color-focus-text:#000000;
+  --color-dim-text:#7c7c7c;
+  --color-button-bg:#3f1dee
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("./assets/fonts/Inter/Inter-VariableFont_opsz\,wght.ttf");
+}
+@font-face{
+  font-family: Limelight;
+  src: url("./assets/fonts/Limelight/Limelight-Regular.ttf");
+}
+
+.font-limelight{
+  font-family: Limelight,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.font-inter{
+  font-family: Inter, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.right-bg{
+  background-image: url(./assets/images/right-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
