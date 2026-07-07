@@ -17,6 +17,10 @@
   src: url("./assets/fonts/Limelight/Limelight-Regular.ttf");
 }
 
+*{
+  user-select: none;
+  -webkit-user-select: none;
+}
 .font-limelight{
   font-family: Limelight,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -29,4 +33,5 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
