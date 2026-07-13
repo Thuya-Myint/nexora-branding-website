@@ -39,7 +39,7 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
         </div>
         <div className='mt-10'>
           <h2 className='text-2xl font-limelight'>MileStone</h2>
-          <p className='text-dim-text mt-2'>
+          <div className='text-dim-text mt-2'>
             <div>
               🚀 200+ Store Joined
             </div>
@@ -49,7 +49,7 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
             <div>
               🛒 50000+ Orders Completed
             </div>
-          </p>
+          </div>
         </div>
         <div>
           <h2 className='font-limelight text-2xl mt-10'>
