@@ -12,9 +12,9 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
 
   return (
 
-    <div className='w-[65%]  overflow-auto bg-primary-bg px-10' >
+    <div className='w-[65%]  overflow-auto bg-primary-bg ' >
 
-      <div className='flex items-center text-focus-text font-limelight '>
+      <div className='flex items-center text-focus-text font-limelight px-10'>
         <img
           src={logo}
           alt="Nexora logo"
@@ -22,7 +22,7 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
         />
         <h1 className='text-3xl tracking-wide'>Nexora</h1>
       </div>
-      <div className='mt-10'>
+      <div className='mt-10 px-10'>
         <div className='flex flex-col'>
           <div className='text-dim-text font-inter tracking-wide'>
             <p className='text-xl font-light border-l-6 border-button-bg pl-2'>Nexora is a next-generation e-commerce platform built for the modern shopper.</p>
