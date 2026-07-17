@@ -2,7 +2,7 @@ import contract from '../assets/images/contract.svg'
 import { privacyPolicy } from '../constants'
 const PrivacyAndPolicy = ({ formRef }) => {
   return (
-    <div className="min-h-screen bg-divider-bg mt-10 md:p-10 p-4 flex flex-col items-center pb-20" ref={formRef}>
+    <div className="min-h-screen bg-divider-bg  md:p-10 p-4 flex flex-col items-center pb-20" ref={formRef}>
 
       <h1 className="text-white text-center text-xl underline ">
         Privacy And Policy

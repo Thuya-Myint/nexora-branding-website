@@ -72,7 +72,7 @@ const ApplicationForm = ({ formRef }) => {
     if (isValidationPassed) return alert("form submitted!")
   }
   return (
-    <div className="mt-10" ref={formRef} >
+    <div className="my-10" ref={formRef} >
       <div className="bg-divider-bg text-white p-4 px-10 mb-10 ">
         Sell your products on our e-commerce!
       </div>
