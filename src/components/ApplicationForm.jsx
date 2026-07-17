@@ -76,17 +76,17 @@ const ApplicationForm = ({ formRef }) => {
       <div className="bg-divider-bg text-white p-4 px-10 mb-10 ">
         Sell your products on our e-commerce!
       </div>
-      <div className="px-10">
+      <div className="md:px-10 px-4">
         <h1 className="text-2xl border-l-6 border-l-button-bg pl-4">
           Application Form
         </h1>
-        <div className="mt-10 w-100 flex flex-col gap-4">
-          <div className="flex gap-2">
+        <div className="mt-10 w-full xl:w-1/2 sm:w-3/4 flex flex-col gap-4">
+          <div className="sm:flex gap-2">
             <input
               value={formData.firstName}
               type="text"
               placeholder="FirstName"
-              className={`border-2 border-black/10 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("firstName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+              className={`border-2 w-full border-black/10 outline-0 md:w-1/2 capitalize  p-2 rounded-xl ${errorKeys.includes("firstName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
               onChange={(e) => {
                 setErrorKeys(errorKeys.filter(key => key !== "firstName"))
                 setFormData({
@@ -103,7 +103,7 @@ const ApplicationForm = ({ formRef }) => {
               value={formData.lastName}
               type="text"
               placeholder="lastName"
-              className={`border-2 border-black/10 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("lastName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+              className={`border-2 md:w-1/2 w-full sm:mt-0 mt-2 border-black/10 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("lastName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
               onChange={(e) => {
                 setErrorKeys(errorKeys.filter(key => key !== "lastName"))
                 setFormData({
@@ -122,7 +122,7 @@ const ApplicationForm = ({ formRef }) => {
             ref={emailRef}
             value={formData.email}
             placeholder="Email"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("email") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 w-full border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("email") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "email"))
               setFormData({
@@ -139,7 +139,7 @@ const ApplicationForm = ({ formRef }) => {
             ref={phoneNumberRef}
             value={formData.phoneNumber}
             placeholder="Phone number"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("phoneNumber") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 w-full border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("phoneNumber") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "phoneNumber"))
               setFormData({
@@ -156,7 +156,7 @@ const ApplicationForm = ({ formRef }) => {
             ref={passwordRef}
             value={formData.password}
             placeholder="Password"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("password") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 w-full border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("password") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "password"))
               setFormData({
@@ -173,7 +173,7 @@ const ApplicationForm = ({ formRef }) => {
             ref={confirmPasswordRef}
             value={formData.confirmPassword}
             placeholder="Confirm password"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("confirmPassword") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 w-full border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("confirmPassword") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "confirmPassword"))
               setFormData({

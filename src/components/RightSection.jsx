@@ -12,9 +12,9 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
 
   return (
 
-    <div className='w-[65%]  overflow-auto bg-primary-bg ' >
+    <div className='md:w-[65%]  overflow-auto bg-primary-bg ' >
 
-      <div className='flex items-center text-focus-text font-limelight px-10'>
+      <div className='flex items-center text-focus-text font-limelight px-4 md:px-10'>
         <img
           src={logo}
           alt="Nexora logo"
@@ -22,7 +22,7 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
         />
         <h1 className='text-3xl tracking-wide'>Nexora</h1>
       </div>
-      <div className='mt-10 px-10'>
+      <div className='mt-10 md:px-10 px-4'>
         <div className='flex flex-col'>
           <div className='text-dim-text font-inter tracking-wide'>
             <p className='text-xl font-light border-l-6 border-button-bg pl-2'>Nexora is a next-generation e-commerce platform built for the modern shopper.</p>
@@ -59,11 +59,11 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
             We are a modern e-commerce platform dedicated to connecting customers with trusted sellers through a secure and convenient shopping experience. Our mission is to make online shopping simple, reliable, and accessible by offering a wide range of quality products, competitive prices, and efficient delivery services.
           </p>
         </div>
-        <div>
+        <div >
           <h2 className='font-limelight text-2xl mt-10'>
             Social Platform
           </h2>
-          <div className='flex justify-between items-center'>
+          <div className='xs:flex justify-between items-center'>
             <div className='flex gap-2 text-2xl mt-2 text-dim-text'>
               <a href="https://google.com" target='_blank' referrerPolicy='no-referrer' rel='noopener'>
                 <FaFacebook className='hover:text-focus-text cursor-pointer' />
@@ -74,7 +74,7 @@ const RightSection = ({ applicationFormRef, inquiryFormRef, privacyRef, scrollTo
             </div>
             <CustomButton
               text={"Visit our website"}
-              extraClass={"h-10"}
+              extraClass={"h-10 sm:mt-0 mt-2"}
             />
 
           </div>

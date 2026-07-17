@@ -12,7 +12,7 @@ const App = () => {
     })
   }
   return (
-    <div className=" flex relative justify-end min-w-screen overflow-x-hidden ">
+    <div className=" md:flex relative justify-end min-w-screen overflow-x-hidden ">
       <LeftSection
         applicationFormRef={applicationFormRef}
         scrollToDiv={scrollToDiv}
