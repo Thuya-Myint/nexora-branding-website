@@ -60,20 +60,20 @@ const InquiryForm = ({ formRef }) => {
   }
   return (
     <div className="mt-10" ref={formRef} >
-      <div className="bg-divider-bg text-white p-4 px-10 mb-10 ">
+      <div className="bg-divider-bg text-white p-4 md:px-10 px-4 mb-10 ">
         Inquire anything you want to know!
       </div>
-      <div className="px-10">
+      <div className="md:px-10 px-4">
         <h1 className="text-2xl border-l-6 border-l-button-bg pl-4 ">
           Inquiry
         </h1>
-        <div className="mt-10 w-100 flex flex-col gap-4">
-          <div className="flex gap-2">
+        <div className="mt-10 w-full xl:w-1/2 sm:w-3/4 flex flex-col gap-4">
+          <div className="sm:flex gap-2">
             <input
               value={formData.firstName}
               type="text"
               placeholder="FirstName"
-              className={`border-2 border-black/10 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("firstName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+              className={`border-2 w-full border-black/10 md:w-1/2 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("firstName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
               onChange={(e) => {
                 setErrorKeys(errorKeys.filter(key => key !== "firstName"))
                 setFormData({
@@ -90,7 +90,7 @@ const InquiryForm = ({ formRef }) => {
               value={formData.lastName}
               type="text"
               placeholder="lastName"
-              className={`border-2 border-black/10 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("lastName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+              className={`border-2  border-black/10 md:w-1/2 w-full sm:mt-0 mt-2 outline-0 capitalize  p-2 rounded-xl ${errorKeys.includes("lastName") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
               onChange={(e) => {
                 setErrorKeys(errorKeys.filter(key => key !== "lastName"))
                 setFormData({
@@ -109,7 +109,7 @@ const InquiryForm = ({ formRef }) => {
             ref={emailRef}
             value={formData.email}
             placeholder="Email"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("email") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 border-black/10 w-full  outline-0  p-2 rounded-xl ${errorKeys.includes("email") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "email"))
               setFormData({
@@ -126,7 +126,7 @@ const InquiryForm = ({ formRef }) => {
             ref={subjectRef}
             value={formData.subject}
             placeholder="Subject or Title"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("subject") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 border-black/10 w-full  outline-0  p-2 rounded-xl ${errorKeys.includes("subject") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "subject"))
               setFormData({
@@ -143,7 +143,7 @@ const InquiryForm = ({ formRef }) => {
             ref={descriptionRef}
             name="description"
             placeholder="description"
-            className={`border-2 border-black/10 outline-0  p-2 rounded-xl ${errorKeys.includes("description") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
+            className={`border-2 border-black/10  w-full outline-0  p-2 rounded-xl ${errorKeys.includes("description") ? "border-red-400 focus:border-red-400" : "focus:border-button-bg"}`}
             onChange={(e) => {
               setErrorKeys(errorKeys.filter(key => key !== "description"))
               setFormData({

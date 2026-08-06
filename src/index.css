@@ -6,7 +6,12 @@
   --color-focus-text:#000000;
   --color-dim-text:#7c7c7c;
   --color-button-bg:#3f1dee;
-  --color-divider-bg:#223f41
+  --color-divider-bg:#223f41;
+  --breakpoint-xs:320px;
+  --breakpoint-sm:480px;
+  --breakpoint-md:768px;
+  --breakpoint-lg:1024px;
+  --breakpoint-xl:1100px;
 
 }
 
