@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import CustomButton from "./CustomButton"
-
+import { isEmailValid } from '../utils/validation'
 const ApplicationForm = ({ formRef }) => {
   //state
   const [formData, setFormData] = useState({
@@ -13,7 +13,8 @@ const ApplicationForm = ({ formRef }) => {
   })
   const [errorKeys, setErrorKeys] = useState([])
   const [isShowPassword, setIsShowPassword] = useState(false)
-
+  const phoneRegex = /^[0-9]+$/
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/
   //ref
   const lastNameRef = useRef(null)
   const emailRef = useRef(null)
@@ -51,21 +52,22 @@ const ApplicationForm = ({ formRef }) => {
       errKeys.push("lastName")
 
     }
-    if (formData.email.trim() === "") {
+    if (!isEmailValid(formData.email)) {
       isValidationPassed = false
       errKeys.push("email")
     }
-    if (formData.phoneNumber.trim() === "") { //check phone number with regular expression
+    if (!phoneRegex.test(formData.phoneNumber)) { //check phone number with regular expression
       isValidationPassed = false
       errKeys.push("phoneNumber")
     }
-    if (formData.password.trim() === "") {//check password with regular expression
+    if (!passwordRegex.test(formData.password)) {//check password with regular expression
       isValidationPassed = false
       errKeys.push("password")
     }
-    if (formData.confirmPassword.trim() === "") {//check confirm password with regular expression
+    if (formData.password !== formData.confirmPassword) {//check confirm password with regular expression
       isValidationPassed = false
-      errKeys.push("confirmPassword")
+      alert("password not matched!")
+      errKeys.push("confirmPassword", "password")
     }
 
     setErrorKeys([...errKeys])
@@ -196,7 +198,7 @@ const ApplicationForm = ({ formRef }) => {
             <label htmlFor="checkbox" className="text-sm cursor-pointer">Show Password</label>
           </div>
 
-          <ul className="text-sm px-4 text-black/40">
+          <ul className={`text-sm px-4  ${errorKeys.includes("password") ? "text-red-500" : "text-black/40"}`}>
             <li className="list-disc">password length (minimin 8 or more)</li>
             <li className="list-disc">upper and lowercase</li>
             <li className="list-disc">character (at least one special character and one number)</li>
